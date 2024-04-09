@@ -39,9 +39,11 @@ def main():
     
     if st.button('Predict'):
         prediction = model.predict([[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13]])
-        prob=model.predict_proba([[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13]])[:,1]
-        percentage_of_heart_disease = prob * 100
-        st.success(f"{int(percentage_of_heart_disease[0])}%")
+        prob = model.predict_proba([[p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13]])[:, 0]
+        prob_1 = model.predict_proba([[p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13]])[:, 1]
+        res = max(prob, prob_1)
+        percentage_of_heart_disease = res * 100
+        st.success(f"Probability of person that he/she can suffer from Heart Disease is {int(percentage_of_heart_disease[0])}%")
 
 
 #if __name__ =='_main_':
