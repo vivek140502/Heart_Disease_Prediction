@@ -25,17 +25,17 @@ def main():
         p2=1
     else:
         p2=0
-    p3 =st.number_input("Enter Value of CP",step=1)
-    p4 =st.number_input("Enter Value of trestbps",step=1)
-    p5 =st.number_input("Enter Value of chol",step=1)
-    p6 =st.number_input("Enter Value of fbs",step=1)
-    p7 =st.number_input("Enter Value of restecg",step=1)
-    p8 =st.number_input("Enter Value of thalach",step=1)
-    p9 =st.number_input("Enter Value of exang",step=1)
-    p10 =st.number_input("Enter Value of oldpeak")
-    p11 =st.number_input("Enter Value of slope",step=1)
-    p12 =st.number_input("Enter Value of ca",step=1)
-    p13=st.number_input("Enter Value of thal",step=1)
+    p3 =st.number_input("Enter Value of CP(chest pain type (4 values))",step=1)
+    p4 =st.number_input("Enter Value of trestbps(resting blood pressure)",step=1)
+    p5 =st.number_input("Enter Value of chol(serum cholestoral in mg/dl)",step=1)
+    p6 =st.number_input("Enter Value of fbs(fasting blood sugar > 120 mg/dl)",step=1)
+    p7 =st.number_input("Enter Value of restecg(resting electrocardiographic results (values 0,1,2))",step=1)
+    p8 =st.number_input("Enter Value of maximum heart rate achieved ",step=1)
+    p9 =st.number_input("Enter Value of exang(exercise induced angina)",step=1)
+    p10 =st.number_input("Enter Value of oldpeak(oldpeak = ST depression induced by exercise relative to rest)")
+    p11 =st.number_input("Enter Value of slope(the slope of the peak exercise ST segment)",step=1)
+    p12 =st.number_input("Enter Value of ca(number of major vessels (0-3) colored by flourosopy)",step=1)
+    p13=st.number_input("Enter Value of thal(thal: 0 = normal; 1 = fixed defect; 2 = reversable defect)",step=1)
     
     if st.button('Predict'):
         prediction = model.predict([[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13]])
