@@ -14,7 +14,7 @@ import joblib
 def main():
     html_temp="""
     <div style="background-color:lightblue;padding:16px">
-    <h2 style="color:black";text-align:center">Heart Disease Prediction</h2>
+    <h2 style="color:black";text-align:center">AI Enabled Heart Disease Prediction</h2>
     </div>"""
     
     st.markdown(html_temp,unsafe_allow_html=True)
